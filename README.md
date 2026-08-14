@@ -182,8 +182,24 @@ console.log(fake.sent); // gönderilen tüm mesajlar bellekte
 | **VatanSMS** | `VatanSmsProvider` | REST/JSON | Base URL ve hata yanıtı şekli canlı olarak doğrulandı; başarı yanıtının bazı alan adları dokümante edilmediği için çıkarımla yazıldı |
 | **NetGSM** | `NetGsmProvider` | REST/JSON (Basic Auth) | Resmi OpenAPI spesifikasyonuna (github.com/netgsm/netgsm-sms-js) göre yazıldı, gerçek hesapla test edilmedi. Bakiye sorgulama bu API'de yok. |
 
-Her sağlayıcı için ücretsiz deneme/test kredisiyle kayıt olabiliyorsunuz —
-kendi hesabınızla ilk göndiriminizi yapıp doğrulamanızı öneririz.
+### Test/deneme ortamı erişimi (sağlayıcı bazında)
+
+Bu kütüphane hiçbir sağlayıcının sandbox'ına bizim adımıza bağlanmadı —
+aşağıdaki bilgiler her sağlayıcının kendi genel/herkese açık
+dokümantasyonundan alınmıştır; gerçek test için kendi hesabınızı
+açmanız gerekir.
+
+| Sağlayıcı | Ücretsiz deneme hesabı | Not |
+|---|---|---|
+| **İleti Merkezi** | ✅ Var — "Ücretsiz Üye" kaydıyla panelden test kredisi tanımlanıyor | Test gönderimlerinde `sender` alanına `"APITEST"` yazılabiliyor (onaylı başlık gerekmiyor) |
+| **Verimor** | ✅ Var — kredi kartı istemeden 1000 SMS deneme kredisi | Kayıt sonrası **panelde gönderim yapacağınız sunucunun IP adresini tanımlamanız zorunlu** (BTK yönergesi) — tanımlamazsanız her istek 401 döner |
+| **VatanSMS** | ✅ Var — ücretsiz demo kayıtla 10 SMS hediye kredi | Taahhütsüz; gerçek kimlik bilgisi olmadan da API'nin canlı olduğunu ve hata şeklini doğrulayabildik (bkz. yukarıdaki "Doğrulama durumu") |
+| **NetGSM** | ⚠️ Belirsiz | Kayıt akışı müşteri temsilcisi görüşmesi ve onaylı gönderici başlığı istiyor gibi görünüyor; herkese açık dokümantasyonda ücretsiz test kredisi ibaresine rastlanmadı — kendi hesabınızla teyit etmeniz gerekir |
+
+Test ederken gerçek bir numaraya SMS gitmesini istemiyorsanız, önce
+[`FakeProvider`](#örnek-8--testlerde-gerçek-bir-sağlayıcıya-bağlanmadan-fakeprovider-kullanmak)
+ile uygulama akışınızı (OTP gönder/doğrula, hata yönetimi vb.) deneyin;
+gerçek sağlayıcıya sadece son adımda geçin.
 
 ## API
 
