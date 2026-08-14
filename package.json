@@ -1,0 +1,60 @@
+{
+  "name": "@voxyfy/anadolusms",
+  "version": "1.0.0",
+  "description": "Türkiye'deki SMS/toplu mesajlaşma sağlayıcıları (İleti Merkezi, Verimor, VatanSMS, NetGSM) için tek arayüzlü SMS ve OTP (tek kullanımlık şifre) doğrulama kütüphanesi (Node.js/TypeScript)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "sms",
+    "sms api",
+    "toplu sms",
+    "otp",
+    "sms otp",
+    "sms dogrulama",
+    "iki adimli dogrulama",
+    "2fa",
+    "iletimerkezi",
+    "verimor",
+    "vatansms",
+    "netgsm",
+    "turkiye",
+    "türkiye",
+    "turkish sms",
+    "nodejs",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Voxyfy/anadolusms.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
