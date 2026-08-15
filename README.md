@@ -284,6 +284,10 @@ session için sorunsuz çalışır.
 Aynı ekip tarafından geliştirilen, aynı sade ve tek amaca odaklı yaklaşımla
 yazılmış diğer açık kaynak kütüphaneler:
 
+- **[Voxyfy/anadolusms-example](https://github.com/Voxyfy/anadolusms-example)**
+  — bu paketin gerçek SMS sağlayıcı hesaplarına karşı denendiği Express test
+  projesi. OTP gönder/doğrula, düz SMS, teslimat durumu ve bakiye sorgusu için
+  basit bir arayüz içerir.
 - **[Voxyfy/anadolupay](https://github.com/Voxyfy/anadolupay)** (PHP/Laravel)
   ve **[Voxyfy/anadolupay-node](https://github.com/Voxyfy/anadolupay-node)**
   ([npm](https://www.npmjs.com/package/@voxyfy/anadolupay)) — Türk banka ve
