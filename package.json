@@ -1,6 +1,6 @@
 {
   "name": "@voxyfy/anadolusms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Türkiye'deki SMS/toplu mesajlaşma sağlayıcıları (İleti Merkezi, Verimor, VatanSMS, NetGSM) için tek arayüzlü SMS ve OTP (tek kullanımlık şifre) doğrulama kütüphanesi (Node.js/TypeScript)",
   "license": "MIT",
   "type": "module",

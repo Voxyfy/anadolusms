@@ -1,5 +1,9 @@
 # @voxyfy/anadolusms — Türkiye SMS API ve OTP Doğrulama Kütüphanesi
 
+<p align="center">
+  <img src=".github/banner.png" alt="anadolusms" width="640">
+</p>
+
 **anadolusms**, İleti Merkezi, Verimor, VatanSMS ve NetGSM gibi Türkiye'deki
 SMS/toplu mesajlaşma sağlayıcılarını tek bir arayüz altında birleştiren;
 kayıt, şifre sıfırlama ve iki adımlı doğrulama (2FA) akışları için hazır bir
